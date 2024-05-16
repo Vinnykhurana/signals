@@ -847,9 +847,8 @@
     }
 
     function checkPassword() {
-        var encryptedPassword = encrypt(document.getElementById("passwordInput").value, 3); // Encrypt the password with a shift of 3
-        // Check if encrypted password matches the expected encrypted password
-        if (encryptedPassword === "ylqqb") { // "vinny" encrypted with a Caesar cipher and shift of 3
+        var encryptedPassword = encrypt(document.getElementById("passwordInput").value, 3);
+        if (encryptedPassword === "ylqqb") {
             document.getElementById("errorMessage").style.display = "none";
             document.getElementById("protectedContent").style.display = "block";
         } else {
